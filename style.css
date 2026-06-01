@@ -1,0 +1,28 @@
+
+body{
+font-family:Arial,sans-serif;
+background:#e8e8e8;
+text-align:center;
+margin:0;padding:20px;
+}
+.container{max-width:900px;margin:auto}
+.hud{
+display:flex;
+justify-content:center;
+gap:25px;
+align-items:center;
+margin-bottom:15px;
+font-weight:bold;
+}
+canvas{
+border:10px solid #888;
+border-radius:10px;
+cursor:pointer;
+box-shadow:0 4px 12px rgba(0,0,0,.2);
+background:#d0d0d0;
+}
+#status{
+margin-top:15px;
+font-size:22px;
+font-weight:bold;
+}

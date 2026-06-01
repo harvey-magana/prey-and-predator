@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prey and Predator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<h1>Prey and Predator</h1>
+<p>Click a neighboring tile (including diagonals) to move the mole. Escape to the hole before the fox catches you.</p>
+
+<div class="hud">
+<div id="round"></div>
+<div id="score"></div>
+<button id="restartBtn">Restart Match</button>
+</div>
+
+<canvas id="gameBoard" width="640" height="640"></canvas>
+<div id="status"></div>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
