@@ -1,26 +1,34 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Prey and Predator</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101d25">
+  <title>Prey and Predator — Glass Edition</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
-<h1>Prey and Predator</h1>
-<p>Click a neighboring tile (including diagonals) to move the mole. Escape to the hole before the fox catches you.</p>
-
-<div class="hud">
-<div id="round"></div>
-<div id="score"></div>
-<button id="restartBtn">Restart Match</button>
-</div>
-
-<canvas id="gameBoard" width="640" height="640"></canvas>
-<div id="status"></div>
-</div>
-
-<script src="game.js"></script>
+  <main class="shell">
+    <header class="hero">
+      <p class="eyebrow">THE TILE ARENA · GLASS EDITION</p>
+      <h1>PREY <span>&</span> PREDATOR</h1>
+      <p class="subtitle">One mole. One fox. One way out.</p>
+    </header>
+    <section class="game-panel" aria-label="Game">
+      <div class="hud">
+        <div class="stat"><span class="stat-label">ROUND</span><strong id="round">1 / 5</strong></div>
+        <div class="stat"><span class="stat-label">MOLE · PREY</span><strong id="preyScore">0</strong></div>
+        <div class="stat"><span class="stat-label">FOX · PREDATOR</span><strong id="predatorScore">0</strong></div>
+        <div class="actions">
+          <button id="soundBtn" type="button" aria-pressed="false">🔇 Sound off</button>
+          <button id="restartBtn" type="button">↻ Restart</button>
+        </div>
+      </div>
+      <div class="board-frame"><canvas id="gameBoard" width="640" height="640" aria-label="Eight by eight game board; click a neighboring tile to move the mole">Your browser needs canvas support.</canvas></div>
+      <div id="status" class="status" role="status" aria-live="polite">Click any adjacent tile to guide your mole to the black hole.</div>
+    </section>
+    <footer class="rules"><span>🐹 MOLE · 1 TILE IN ANY DIRECTION</span><span>🦊 FOX · UP TO 2 TILES NORTH / SOUTH / EAST / WEST</span><span>◼ BLACK HOLE · ESCAPE</span></footer>
+  </main>
+  <script src="game.js" defer></script>
 </body>
 </html>
